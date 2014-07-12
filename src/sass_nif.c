@@ -51,7 +51,7 @@ static ERL_NIF_TERM sass_compile_nif(ErlNifEnv* env, int argc, const ERL_NIF_TER
     } else if (ctx->output_string) {
       ret = make_tuple(env, ctx->output_string, "ok");
     } else {
-      ret = make_tuple(env, "Unkown internal error.", "error");
+      ret = make_tuple(env, "Unknown internal error.", "error");
     }
 
     sass_free_context(ctx);
@@ -88,7 +88,7 @@ static ERL_NIF_TERM sass_compile_file_nif(ErlNifEnv* env, int argc, const ERL_NI
     } else if (ctx->output_string) {
       ret = make_tuple(env, ctx->output_string, "ok");
     } else {
-      ret = make_tuple(env, "Unkown internal error.", "error");
+      ret = make_tuple(env, "Unknown internal error.", "error");
     }
 
     sass_free_file_context(ctx);
