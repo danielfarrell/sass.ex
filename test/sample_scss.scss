@@ -1,0 +1,12 @@
+/* example.scss */
+
+#navbar {
+  width: 80%;
+  height: 23px;
+
+  ul { list-style-type: none; }
+  li {
+    float: left;
+    a { font-weight: bold; }
+  }
+}
