@@ -57,7 +57,9 @@ sass_ex:
 	mix compile
 
 $(SASS_LIB):
+	git submodule update --init && \
 	cd libsass_src && \
+	git submodule update --init && \
 	CFLAGS="$(CFLAGS_SASS)" $(MAKE) 2>&1 >/dev/null
 
 libsass_src/configure.sh:
