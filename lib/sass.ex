@@ -7,14 +7,18 @@ defmodule Sass do
     Compiles a string of SASS into a string of CSS
   """
   def compile(string) do
-    Sass.Compiler.compile(string)
+    string
+    |> String.strip
+    |> Sass.Compiler.compile
   end
 
   @doc """
     Compiles a file of SASS into a string of CSS
   """
   def compile_file(path) do
-    Sass.Compiler.compile_file(path)
+    path
+    |> String.strip
+    |> Sass.Compiler.compile_file
   end
 
 end
