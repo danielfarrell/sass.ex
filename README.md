@@ -24,7 +24,7 @@ Obviously this is really early release software. The plans are:
 - Better Documentation
 - Make Hex package
 - Compile a folder(sass_folder_context)
-- Make a [Rotor](https://github.com/HashNuke/rotor)
+- Improve [the rotor](https://github.com/danielfarrell/sass_rotor)
 
 ## License
 
