@@ -23,4 +23,10 @@ defmodule SassTest do
     assert expected_css == result_css
   end
 
+  test "@import works as expected" do
+    {:ok, result} = Sass.compile_file("./test/samples/app.scss")
+    assert Regex.match?(~r/background-color: #eee;/, result)
+    assert Regex.match?(~r/height: 100%;/, result)
+  end
+
 end
