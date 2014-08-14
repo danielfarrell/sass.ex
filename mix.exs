@@ -1,12 +1,3 @@
-defmodule Mix.Tasks.Compile.Sass do
-  @shortdoc "Compiles sass library"
-  def run(_) do
-    if Mix.shell.cmd("make priv/sass.so") != 0 do
-      raise Mix.Error, message: "could not run `make priv/sass.so`. Do you have make and gcc installed?"
-    end
-  end
-end
-
 defmodule Sass.Mixfile do
   use Mix.Project
 
