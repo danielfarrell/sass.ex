@@ -5,8 +5,8 @@ defmodule Sass.Mixfile do
     [
       app:         :sass,
       version:     "0.0.1",
-      elixir:      "~> 0.14.1",
       compilers:   [:sass, :elixir, :app],
+      elixir:      ">= 0.14.1",
       deps:        deps(Mix.env),
       package:     package,
       description: description
