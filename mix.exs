@@ -1,5 +1,3 @@
-Code.ensure_loaded?(Hex) and Hex.start
-
 defmodule Mix.Tasks.Compile.Sass do
   @shortdoc "Compiles sass library"
   def run(_) do
