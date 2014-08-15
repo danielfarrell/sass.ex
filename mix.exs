@@ -1,14 +1,3 @@
-Code.ensure_loaded?(Hex) and Hex.start
-
-defmodule Mix.Tasks.Compile.Sass do
-  @shortdoc "Compiles sass library"
-  def run(_) do
-    if Mix.shell.cmd("make priv/sass.so") != 0 do
-      raise Mix.Error, message: "could not run `make priv/sass.so`. Do you have make and gcc installed?"
-    end
-  end
-end
-
 defmodule Sass.Mixfile do
   use Mix.Project
 
@@ -16,8 +5,8 @@ defmodule Sass.Mixfile do
     [
       app:         :sass,
       version:     "0.0.1",
-      elixir:      "~> 0.14.1",
-      compilers:   [:sass, :elixir, :app],
+      elixir:      ">= 0.14.1",
+      compilers:   [:elixir, :sass, :app],
       deps:        deps(Mix.env),
       package:     package,
       description: description
