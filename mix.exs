@@ -1,3 +1,5 @@
+Code.require_file "lib/mix/tasks/compile.sass.ex"
+
 defmodule Sass.Mixfile do
   use Mix.Project
 
@@ -6,7 +8,7 @@ defmodule Sass.Mixfile do
       app:         :sass,
       version:     "0.0.1",
       elixir:      "~> 1.0.0",
-      compilers:   [:elixir, :sass, :app],
+      compilers:   [:sass, :elixir, :app],
       deps:        deps(Mix.env),
       package:     package,
       description: description
